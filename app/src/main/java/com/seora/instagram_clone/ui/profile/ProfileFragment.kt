@@ -1,10 +1,13 @@
 package com.seora.instagram_clone.ui.profile
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import com.seora.instagram_clone.EditProfileActivity
 import com.seora.instagram_clone.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -35,7 +38,14 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        val view = inflater.inflate(R.layout.fragment_profile, container, false)
+
+        var edit_account = view.findViewById<Button>(R.id.btn_edit_account)
+        edit_account.setOnClickListener {
+            startActivity(Intent(requireContext(), EditProfileActivity::class.java))
+        }
+
+        return view
     }
 
     companion object {

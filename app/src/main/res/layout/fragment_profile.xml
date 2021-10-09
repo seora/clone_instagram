@@ -19,7 +19,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
-            android:background="@drawable/button_black_background">
+            android:background="@color/transparent">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -38,10 +38,9 @@
                 <ImageButton
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@color/transparent"
+                    android:background="@drawable/add"
                     android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@+id/btn_profile_options"
-                    android:src="@drawable/add"/>
+                    android:layout_toLeftOf="@+id/btn_profile_options"/>
 
                 <ImageButton
                     android:id="@+id/btn_profile_options"
@@ -172,49 +171,103 @@
 
             </LinearLayout>
 
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginBottom="16dp"
-                android:orientation="vertical">
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:text="Full name"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Full name"
-                    android:textSize="12dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="유저 소개글 "
-                    android:textSize="12dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
-
-
-            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:text="유저 소개글 "
+                android:textSize="12dp"
+                android:textColor="@color/black"/>
 
             <Button
                 android:id="@+id/btn_edit_account"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:layout_marginTop="2dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/white"
+                android:background="@drawable/btn_shape"
                 android:text="Edit Profile"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="15dp"
                 android:textAllCaps="false" />
 
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:scrollbars="none">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_highlight"
+                        android:layout_width="30dp"
+                        android:layout_height="23dp"
+                        android:layout_margin="10dp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_add_highlight"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/btn_circle"
+                        android:scaleType="fitCenter"
+                        android:padding="15dp"
+                        android:src="@drawable/add_1"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:src="@drawable/grid"
+                    android:scaleType="fitCenter"
+                    android:padding="15dp"/>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:src="@drawable/withuser"
+                    android:scaleType="fitCenter"
+                    android:padding="13dp"/>
+
+            </LinearLayout>
+
+            <GridView
+                android:id="@+id/grid_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="3"
+                android:padding="5dp" />
 
         </LinearLayout>
 
     </ScrollView>
-
 
 </RelativeLayout>

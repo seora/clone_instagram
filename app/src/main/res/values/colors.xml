@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="colorPrimary">#5c32c7</color>
+    <color name="colorPrimary">#FFFFFFFF</color>
     <color name="colorPrimaryDark">#5c32c7</color>
     <color name="colorAccent">#ff68a5</color>
     <color name="instgramMaroon">#cd486b</color>
@@ -17,4 +17,6 @@
     <color name="instgramOrange">#fbad50</color>
     <color name="instgramYellow">#fccc63</color>
     <color name="transparent">#00000000 </color>
+    <color name="gray">#E0E0E0</color>
+    <color name="blue">#215CF3</color>
 </resources>

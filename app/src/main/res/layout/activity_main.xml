@@ -32,8 +32,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 app:menu="@menu/bottom_nav_menu"
-                app:labelVisibilityMode="unlabeled"
-                android:layout_marginRight="15dp"/>
+                app:labelVisibilityMode="unlabeled"/>
 
         </androidx.appcompat.widget.Toolbar>
 
