@@ -17,6 +17,7 @@
             android:id="@+id/edit_profile_toolbar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            app:contentInsetStart="0dp"
             android:background="@color/white">
 
             <LinearLayout
@@ -26,11 +27,13 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/btn_cancel"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@color/transparent"
                     android:gravity="left|center"
+                    android:layout_marginLeft="10dp"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:text="취소"

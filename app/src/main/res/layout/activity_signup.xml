@@ -86,7 +86,7 @@
             android:background="@color/subgray"
             android:inputType="textPersonName"
             android:textColor="@color/charcoal"
-            android:text="Email" />
+            android:hint="Email" />
 
 
         <EditText
@@ -100,7 +100,7 @@
             android:background="@color/subgray"
             android:inputType="textPersonName"
             android:textColor="@color/charcoal"
-            android:text="Fullname" />
+            android:hint="Fullname" />
 
 
         <EditText
@@ -114,7 +114,7 @@
             android:background="@color/subgray"
             android:inputType="textPersonName"
             android:textColor="@color/charcoal"
-            android:text="Username" />
+            android:hint="Username" />
 
         <EditText
             android:id="@+id/txt_password"
@@ -124,7 +124,7 @@
             android:ems="10"
             android:inputType="textPassword"
             android:background="@color/subgray"
-            android:text="Password"
+            android:hint="Password"
             android:textColor="@color/charcoal"
             android:layout_gravity="center" />
 

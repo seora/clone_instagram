@@ -34,10 +34,10 @@ class SignupActivity : AppCompatActivity() {
         val password = txt_password.text.toString()
 
         when{
-            TextUtils.isEmpty(fullname) -> Toast.makeText(this, "Full name을 입력해주세요", Toast.LENGTH_SHORT)
-            TextUtils.isEmpty(id_email) -> Toast.makeText(this, "ID(Email)을 입력해주세요", Toast.LENGTH_SHORT)
-            TextUtils.isEmpty(username) -> Toast.makeText(this, "Username을 입력해주세요", Toast.LENGTH_SHORT)
-            TextUtils.isEmpty(password) -> Toast.makeText(this, "비밀번호를 입력해주세요", Toast.LENGTH_SHORT)
+            TextUtils.isEmpty(fullname) -> Toast.makeText(this, "Full name을 입력해주세요", Toast.LENGTH_SHORT).show()
+            TextUtils.isEmpty(id_email) -> Toast.makeText(this, "ID(Email)을 입력해주세요", Toast.LENGTH_SHORT).show()
+            TextUtils.isEmpty(username) -> Toast.makeText(this, "Username을 입력해주세요", Toast.LENGTH_SHORT).show()
+            TextUtils.isEmpty(password) -> Toast.makeText(this, "비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show()
 
             else -> {
 
@@ -55,7 +55,7 @@ class SignupActivity : AppCompatActivity() {
                         }
                         else{
                             val message = task.exception!!.toString()
-                            Toast.makeText(this, "Error: $message", Toast.LENGTH_LONG)
+                            Toast.makeText(this, "Error: $message", Toast.LENGTH_LONG).show()
                             mAuth.signOut()
                             progressDialog.dismiss()
                         }
@@ -72,27 +72,27 @@ class SignupActivity : AppCompatActivity() {
 
         val userMap = HashMap<String, Any>()
         userMap["uid"] = currentUserID
-        userMap["fullname"] = currentUserID
-        userMap["email"] = currentUserID
+        userMap["fullname"] = fullName.toLowerCase()
+        userMap["username"] = userName.toLowerCase()
+        userMap["email"] = id_email
         userMap["bio"] = "using instagram clone app!"
-        userMap["image"] = "gs://clone-instagram-app-9e6f7.appspot.com/Default Images/profile.png"
+        userMap["image"] = "https://firebasestorage.googleapis.com/v0/b/clone-instagram-app-9e6f7.appspot.com/o/Default%20Images%2Fprofile.png?alt=media&token=e40322c3-3758-4670-aa06-4d88edc73cc3"
 
         usersRef.child(currentUserID).setValue(userMap)
             .addOnCompleteListener { task ->
                 if(task.isSuccessful){
                     progressDialog.dismiss()
-                    Toast.makeText(this, "Account has been created successfully", Toast.LENGTH_LONG)
+                    Toast.makeText(this, "Account has been created successfully", Toast.LENGTH_LONG).show()
 
                     val intent = Intent(this@SignupActivity, MainActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-
                     startActivity(intent)
                     finish()
 
                 }
                 else{
                     val message = task.exception!!.toString()
-                    Toast.makeText(this, "Error: $message", Toast.LENGTH_LONG)
+                    Toast.makeText(this, "Error: $message", Toast.LENGTH_LONG).show()
                     FirebaseAuth.getInstance().signOut()
                     progressDialog.dismiss()
                 }

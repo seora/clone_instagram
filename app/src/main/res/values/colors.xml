@@ -20,6 +20,9 @@
     <color name="gray">#E0E0E0</color>
     <color name="subgray">#F3F3F3</color>
     <color name="charcoal">#595959</color>
+    <color name="gray2">#A1A1A1</color>
     <color name="fbblue">#3451A3</color>
     <color name="blue">#215CF3</color>
+    <color name="red">#F44336</color>
+
 </resources>

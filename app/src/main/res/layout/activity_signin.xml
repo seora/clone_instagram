@@ -17,7 +17,7 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginTop="100dp"
-            tools:srcCompat="@drawable/instagram_logo" />
+            android:src="@drawable/instagram_logo" />
 
         <EditText
             android:id="@+id/editTextTextPersonName"
@@ -30,7 +30,7 @@
             android:background="@color/subgray"
             android:inputType="textPersonName"
             android:textColor="@color/charcoal"
-            android:text=" Phone number, Username or Email" />
+            android:hint="  Phone number, Username or Email" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
@@ -40,7 +40,7 @@
             android:ems="10"
             android:inputType="textPassword"
             android:background="@color/subgray"
-            android:text="Password"
+            android:hint="  Password"
             android:textColor="@color/charcoal"
             android:layout_gravity="center" />
 

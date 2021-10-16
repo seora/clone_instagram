@@ -8,12 +8,12 @@ import androidx.fragment.app.Fragment
 import com.seora.instagram_clone.ui.home.HomeFragment
 import com.seora.instagram_clone.ui.notifications.NotificationsFragment
 import com.seora.instagram_clone.ui.profile.ProfileFragment
+import com.seora.instagram_clone.ui.profile.SettingFragment
 import com.seora.instagram_clone.ui.search.SearchFragment
 
 class MainActivity : AppCompatActivity() {
 
     internal var selectedFragment : Fragment? = null
-
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun moveToFragment(fragment: Fragment)
+    fun moveToFragment(fragment: Fragment)
     {
         val fragmentTrans = supportFragmentManager.beginTransaction()
         fragmentTrans.replace(R.id.fragment_container, fragment)

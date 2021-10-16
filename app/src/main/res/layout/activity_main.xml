@@ -24,6 +24,7 @@
             android:id="@+id/home_toolbar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            app:contentInsetStart="0dp"
             android:background="@color/white">
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -31,8 +32,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
-                app:menu="@menu/bottom_nav_menu"
-                app:labelVisibilityMode="unlabeled"/>
+                app:labelVisibilityMode="unlabeled"
+                app:menu="@menu/bottom_nav_menu" />
 
         </androidx.appcompat.widget.Toolbar>
 

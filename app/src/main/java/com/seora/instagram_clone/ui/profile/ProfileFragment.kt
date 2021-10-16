@@ -8,7 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import com.seora.instagram_clone.EditProfileActivity
+import com.seora.instagram_clone.MainActivity
 import com.seora.instagram_clone.R
+import kotlinx.android.synthetic.main.fragment_profile.*
+import kotlinx.android.synthetic.main.fragment_profile.view.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -43,6 +46,10 @@ class ProfileFragment : Fragment() {
         var edit_account = view.findViewById<Button>(R.id.btn_edit_account)
         edit_account.setOnClickListener {
             startActivity(Intent(requireContext(), EditProfileActivity::class.java))
+        }
+
+        view.btn_profile_options.setOnClickListener {
+            (activity as MainActivity).moveToFragment(SettingFragment())
         }
 
         return view

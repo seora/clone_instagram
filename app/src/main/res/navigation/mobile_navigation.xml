@@ -33,5 +33,16 @@
         android:id="@+id/nav_profile"
         android:name="com.seora.instagram_clone.ui.profile.ProfileFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_nav_profile_to_nav_setting"
+            app:destination="@id/nav_setting" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.seora.instagram_clone.ui.profile.SettingFragment"
+        tools:layout="@layout/fragment_setting"/>
+
+
 </navigation>
