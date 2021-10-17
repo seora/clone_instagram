@@ -11,5 +11,6 @@
     <string name="logintext">Sign up to see photo and videos \n from your friends</string>
     <string name="loginpolicy">By signing up, you agree to out Terms, \n Data Policy and Cookies Policy.</string>
     <string name="settinguser">스토리 및 게시물 공유, 로그인 등 Instagram, Facebook, Messenger 간 연결된 환경에 대한 설정을 관리하세요</string>
+    <string name="sign_up">Sign up</string>
 
 </resources>

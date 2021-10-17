@@ -41,22 +41,18 @@ class SearchFragment : Fragment() {
 
         view.search_edit_txt.addTextChangedListener(object : TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                TODO("Not yet implemented")
+            }
+            override fun afterTextChanged(s: Editable?) {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (view.search_edit_txt.text.toString() == ""){
-
                 }
                 else{
                     recyclerView?.visibility = View.VISIBLE
                     retrieveUsers()
                     searchUser(s.toString().toLowerCase())
                 }
-            }
-
-            override fun afterTextChanged(s: Editable?) {
-                TODO("Not yet implemented")
             }
         })
 
@@ -73,12 +69,15 @@ class SearchFragment : Fragment() {
             override fun onDataChange(datasnapshot: DataSnapshot) {
                 mUser?.clear()
 
-                if (view?.search_edit_txt?.text.toString() == ""){
-
+                for (snapshot in datasnapshot.children){
+                    val user = snapshot.getValue(User::class.java)
+                    if (user != null){
+                        mUser?.add(user)
+                    }
                 }
+                searchUserAdapter?.notifyDataSetChanged()
             }
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
             }
         })
     }
@@ -97,11 +96,11 @@ class SearchFragment : Fragment() {
                             mUser?.add(user)
                         }
                     }
+                    searchUserAdapter?.notifyDataSetChanged()
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
             }
 
         })

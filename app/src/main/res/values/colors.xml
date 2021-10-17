@@ -8,10 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="colorPrimary">#FFFFFFFF</color>
+    <color name="colorPrimary">#FF000000</color>
     <color name="colorPrimaryDark">#5c32c7</color>
     <color name="colorAccent">#ff68a5</color>
-    <color name="instgramMaroon">#cd486b</color>
+    <color name="instgramMaroon">#E1306c</color>
     <color name="instgramPurple">#8a3ab9</color>
     <color name="instgramBlue">#4c68d7</color>
     <color name="instgramOrange">#fbad50</color>

@@ -59,6 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Login"
+            app:backgroundTint="@null"
             android:background="@color/blue"
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
@@ -128,11 +129,13 @@
 
             <Button
                 android:id="@+id/btn_signup"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:background="@color/transparent"
-                android:text="Sign up"
+                app:backgroundTint="@null"
+                android:text="@string/sign_up"
+                android:textStyle="bold"
                 android:textColor="@color/blue"
                 android:textSize="12dp" />
 
